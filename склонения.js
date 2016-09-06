@@ -1,4 +1,4 @@
-﻿function end(number, endingArr){
+﻿function end(number, endingArr) {
     var i, 
         ending, 
         currentNum = number;
