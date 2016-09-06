@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Замыкание</title>
+    <script>
+    window.onload = function() {
+        var count = 0,
+            mess = document.getElementById('mess');
+
+        function end(v) {
+            var ending,
+            current = v;
+
+            v = v % 100;
+
+            if (v >= 12 && v <= 14) {
+                ending = current + " раз";
+            } else {
+                v = v % 10;
+                switch (v) {
+                  case (2):
+                  case (3):
+                  case (4): ending = current + " раза"; break;
+                  default: ending = current + " раз";
+                }
+            }
+              return ending;
+        }
+
+        document.getElementById('but').onclick = function() {
+            count++;
+            mess.innerHTML = "Кнопка нажата " + end(count);
+        }
+
+        document.getElementById('reset').onclick = function() {
+	          count = 0;
+	          mess.innerHTML = "Кнопка нажата " + count + " раз";
+        }
+    }
+
+    </script>
+    <style>
+    input, div {
+    margin: 10px;
+    }
+    </style>
+</head>
+<body>
+
+<input type="button" id="but" value="Нажать!">
+<input type="button" id="reset" value="Cбросить">
+<div id="mess">Кнопка нажата 0 раз</div>
+
+</body>
+</html>
