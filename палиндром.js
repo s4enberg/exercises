@@ -11,5 +11,4 @@ String.prototype.polindrome = function() {
             return this + " является палиндромом";
         }
     }
-    return this + " является палиндромом";
 };
