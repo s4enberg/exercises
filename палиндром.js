@@ -7,7 +7,7 @@ String.prototype.polindrome = function() {
             return this + " не является палиндромом";
         }
 
-        if (i === (len-i)) {
+        if ((i + 1) === (len - i) || i === (len-i)) {
             return this + " является палиндромом";
         }
     }
